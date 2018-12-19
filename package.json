@@ -1,0 +1,19 @@
+{
+  "name": "pwned-pw",
+  "version": "1.0.0",
+  "description": "Check if your password is in the haveibeenpwned password leak database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junderw/pwned-pw.git"
+  },
+  "keywords": [
+    "haveibeenpwned",
+    "password"
+  ],
+  "author": "Jonathan Underwood",
+  "license": "MIT"
+}
