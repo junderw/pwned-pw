@@ -6,6 +6,11 @@
 npm install pwned-pw
 ```
 
+## Browser Use
+
+* `lib/pwned-pw.js` can be loaded directly into the browser. Minified it is less than 1kb.
+* However, it uses `TextEncoder` so Edge browser is not supported. If you add the TextEncoder polyfill it works.
+
 ## How can I trust the API server? (Hint: you don't need to)
 
 Take two examples:
