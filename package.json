@@ -1,6 +1,6 @@
 {
   "name": "pwned-pw",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Check if your password is in the haveibeenpwned password leak database.",
   "main": "index.js",
   "types": "index.d.ts",
