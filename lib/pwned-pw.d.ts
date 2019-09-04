@@ -1,1 +1,1 @@
-export declare function check(password: string): Promise<number>;
+export declare function check(password: string, timeoutMs?: number): Promise<number>;

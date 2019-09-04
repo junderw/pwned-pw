@@ -23,14 +23,31 @@ pwnedPw.check('123456').then(count1 => {
     return
   }
   console.log('Check #1 and #2 were equal!')
-  return pwnedPw.check(123456).then(v => v, error => {
+  return pwnedPw.check(123456).then(() => {
+    console.error('Error: Does not throw Error on non-string')
+    process.exit(1)
+    return
+  }, error => {
     if (error.message !== 'password must be a String.') {
       console.error('Error: Does not throw Error on non-string')
       process.exit(1)
       return
     }
     console.log('Passed check for throwing Error on non-string')
-    console.log('\nALL CHECKS PASSED! :-D')
+  }).then(() => {
+    return pwnedPw.check('123456', 3).then(() => {
+      console.error('Error: Does not throw Error on timeout')
+      process.exit(1)
+      return
+    }, error => {
+      if (error.message !== 'Timeout') {
+        console.error('Error: Does not throw Error on timeout')
+        process.exit(1)
+        return
+      }
+      console.log('Passed check for throwing Error on timeout')
+      console.log('\nALL CHECKS PASSED! :-D')
+    })
   })
 }).catch(error => {
   console.error('Error: unexpected error')
