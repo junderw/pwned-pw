@@ -4,6 +4,11 @@
   "description": "Check if your password is in the haveibeenpwned password leak database.",
   "main": "index.js",
   "types": "index.d.ts",
+  "files": [
+    "lib",
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "test": "node test/test.js"
   },
